@@ -3936,3 +3936,15 @@ Processing by PostsController#new as HTML
   Parameters: {"author_id"=>"4"}
   Rendered posts/_form.html.erb (1.4ms)
   Rendered posts/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 27ms (Views: 16.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts" for 190.102.85.204 at 2019-01-29 20:59:38 +0000
+Cannot render console from 190.102.85.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XiLT99uOYYZnmoA4Kt6frTAfVb2Bo6bX1jrAENLrPvfDETJlgvy0QUcoqcv8lJy3n8mzJfazYgn95mS2gO5FYg==", "post"=>{"author_id"=>"4", "title"=>"God of War 3", "description"=>"jj"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "God Of War 3"], ["description", "jj"], ["author_id", 4], ["created_at", "2019-01-29 20:59:38.066194"], ["updated_at", "2019-01-29 20:59:38.066194"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://159.203.187.180:54191/posts/17
+Completed 302 Found in 53ms (ActiveRecord: 2.8ms)
