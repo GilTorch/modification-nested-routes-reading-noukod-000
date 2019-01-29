@@ -3948,3 +3948,13 @@ Processing by PostsController#create as HTML
   [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
 Redirected to http://159.203.187.180:54191/posts/17
 Completed 302 Found in 53ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/posts/17" for 190.102.85.204 at 2019-01-29 20:59:38 +0000
+Cannot render console from 190.102.85.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.7ms)
